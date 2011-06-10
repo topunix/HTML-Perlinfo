@@ -742,7 +742,7 @@ L<HTML::Perlinfo::Loaded>, L<HTML::Perlinfo>, L<perlinfo>, L<Module::Info>, L<Mo
 
 =head1 AUTHOR
 
-Mike Accardo <mikeaccardo@yahoo.com>
+Mike Accardo <accardo@cpan.org>
 
 =head1 COPYRIGHT
 
