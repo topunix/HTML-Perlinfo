@@ -1,0 +1,33 @@
+HTML-Perlinfo version 1.61
+=========================
+
+NAME
+HTML::Perlinfo - Display a lot of Perl information in HTML format
+
+DESCRIPTION
+This module outputs a large amount of information about your Perl 
+installation in HTML. So far, this includes information about 
+Perl compilation options, the Perl version, server information
+ and environment, HTTP headers, OS version information, 
+Perl modules, and more.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+None
+
+
+COPYRIGHT AND LICENCE
+Copyright (C) 2009 Mike Accardo <mikeaccardo@yahoo.com>
+
+This library is free software; you can redistribute it and/or modify it under 
+the same terms as Perl itself. 
+

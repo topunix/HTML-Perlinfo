@@ -1,0 +1,16 @@
+Changes
+perlinfo
+Makefile.PL
+MANIFEST
+README
+lib/HTML/Perlinfo.pm
+lib/HTML/Perlinfo/HTML.pod
+lib/HTML/Perlinfo/Common.pm
+lib/HTML/Perlinfo/Base.pm
+lib/HTML/Perlinfo/Apache.pm
+lib/HTML/Perlinfo/Loaded.pm
+lib/HTML/Perlinfo/Modules.pm
+lib/HTML/Perlinfo/General.pm
+t/test.t
+t/info.cgi
+META.yml                                 Module meta-data (added by MakeMaker)
