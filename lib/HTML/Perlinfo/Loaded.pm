@@ -55,7 +55,7 @@ L<Devel::Loaded>, L<HTML::Perlinfo::Modules>, L<HTML::Perlinfo>, L<perlinfo>
 
 =head1 AUTHOR
 
-Mike Accardo <mikeaccardo@yahoo.com>
+Mike Accardo <accardo@cpan.org>
 
 =head1 COPYRIGHT
 
