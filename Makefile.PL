@@ -1,12 +1,25 @@
-
 use 5.006;
+use strict;
+use warnings;
 use ExtUtils::MakeMaker;
 
-WriteMakefile(
+my %params = (
     NAME              => 'HTML::Perlinfo',
-    VERSION           => '1.61',
+    VERSION           => '1.62',
     EXE_FILES         => [ 'perlinfo' ],
-
-    AUTHOR   => 'Mike Accardo (mikeaccardo@yahoo.com)',
+    LICENSE             => 'perl',
+    AUTHOR   => 'Mike Accardo (accardo@cpan.com)',
     
 );
+
+
+if ( $ExtUtils::MakeMaker::VERSION ge '6.46' ) {
+    $parms{META_MERGE} = {
+        resources => {
+            license     => 'http://dev.perl.org/licenses/',
+            repository  => 'git://github.com/mixedconnections/HTML-Perlinfo.git',
+        }
+    };
+}
+
+WriteMakefile( %parms );
