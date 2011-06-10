@@ -201,7 +201,7 @@ Also included in the Perlinfo distribution: L<perlinfo>, L<HTML::Perlinfo::Loade
 
 =head1 AUTHOR
 
-Mike Accardo <mikeaccardo@yahoo.com>
+Mike Accardo <accardo@cpan.org>
 
 =head1 COPYRIGHT
 
