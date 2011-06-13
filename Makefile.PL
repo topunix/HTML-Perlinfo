@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 
 my %parms = (
     NAME              => 'HTML::Perlinfo',
-    VERSION_FROM      => 'lib/HTML/Perlinfo/Perlinfo.pm',
+    VERSION_FROM      => 'lib/HTML/Perlinfo.pm',
     EXE_FILES         => [ 'perlinfo' ],
     LICENSE           => 'perl',
     AUTHOR   => 'Mike Accardo (accardo@cpan.com)',
