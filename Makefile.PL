@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 
-my %params = (
+my %parms = (
     NAME              => 'HTML::Perlinfo',
     VERSION_FROM      => 'lib/HTML/Perlinfo/Perlinfo.pm',
     EXE_FILES         => [ 'perlinfo' ],
