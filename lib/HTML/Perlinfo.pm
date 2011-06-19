@@ -156,8 +156,6 @@ INFO_VARIABLES did not work correctly until version 1.52.
 
 INFO_LOADED is the only option whose output cannot be assigned to a scalar. 
 
-Some might notice that HTML::Perlinfo shares the look and feel of the PHP function phpinfo. It was originally inspired by that function and was first released in 2004 as PHP::Perlinfo, which is no longer available on CPAN.   
-
 Since the module outputs HTML, you may want to use it in a CGI script, but you do not have to. Of course, some information, like HTTP headers, would not be available if you use the module at the command-line. If you decide to use this module in a CGI script, B<make sure you print out the content-type header beforehand>. For example:
 
 	use HTML::Perlinfo;
@@ -175,7 +173,7 @@ I prefer to use the header function from the CGI module:
 
 HTML::Perlinfo stopped printing the header automatically as of version 1.43.
 
-By flushing the output buffer, you can make the HTML appear immediately. If your program is running slow, then you try flushing the buffer.
+By flushing the output buffer, you can make the HTML appear immediately. If your program is running slow, then you can try flushing the buffer.
 
 In this example, I am flushing the buffer because I know that there will be a lot of modules:
 
@@ -187,6 +185,7 @@ In this example, I am flushing the buffer because I know that there will be a lo
 	print header;
 	perlinfo(INFO_MODULES);
 
+Some might notice that HTML::Perlinfo shares the look and feel of the PHP function phpinfo. It was originally inspired by that function and was first released in 2004 as PHP::Perlinfo, which is no longer available on CPAN.   
 
 =head1 BUGS
 
