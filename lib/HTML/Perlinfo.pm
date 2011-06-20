@@ -146,9 +146,13 @@ Displaying detailed server information on the internet is not a good idea and HT
 
 =head1 REQUIREMENTS
 
-HTML::Perlinfo does not require any non-core modules. There are no requirements, except for Perl version 5.6 and above. 
+HTML::Perlinfo does not require any non-core modules. There are no requirements, except Perl version 5.6 and above. 
 
 =head1 NOTES
+
+1. Print the content-type header first if you are using the module in a CGI setting. (mod_perl handles this for you automatically.) If you do not print the header, you will produce an internal server error. Of course, you can forgo a Web server entirely and use the module at the command-line. Please see the L<perlinfo> tool included in this distribution. 
+
+2. If the HTML takes too long to load in the browser, then you can try flushing the output buffer. By flushing the buffer, the HTML will start appearing immediately. 
 
 INFO_APACHE relies soley on environment variables. If you don't use Apache, there is nothing to worry about. You do not need to turn INFO_APACHE off or anything. The section will simply not appear. Any Web server information will still be in the environment variables, unless you configure your server to not report information.   
 
