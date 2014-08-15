@@ -29,7 +29,7 @@ sub print_apache {
         my @mods;
 	my  ($version, $hostname, $port, $mp_status) = ("<i>Not detected</i>") x 7;
 
-	$mp_status = 'enabled' if $self->has qw(mp);
+	$mp_status = 'enabled' if $self->has(qw(mp));
 	
 	  ($version) = $ENV{'SERVER_SOFTWARE'} =~ /(\d+[\.\d]*)/ 
 				if (defined $ENV{'SERVER_SOFTWARE'} && $ENV{'SERVER_SOFTWARE'} =~ /\d+[\.\d]*/); 
