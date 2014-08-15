@@ -93,15 +93,15 @@ sub print_httpd {
 
   my $html .= print_section("Apache");
   $html .= print_table_start();
-  $html .= $a->print_apache() if $a->has qw(env);
+  $html .= $a->print_apache() if $a->has(qw(env));
   $html .= print_table_end();
  
-  $html .= $a->print_modperl() if $a->has qw(mp);
+  $html .= $a->print_modperl() if $a->has(qw(mp));
 
   $html .= print_section("Apache Environment"), 
   $html	.= print_table_start(); 
   $html .= print_table_header(2, "Variable", "Value"), 
-  $html .= $a->print_apache_environment() if $a->has qw(env); 
+  $html .= $a->print_apache_environment() if $a->has(qw(env)); 
   $html .= print_table_end();
 
   return $html;
