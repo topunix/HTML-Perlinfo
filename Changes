@@ -1,5 +1,7 @@
 Revision history for Perl extension HTML::Perlinfo 
 
+1.64 Added git repo and bumped version number in Perlinfo.pm
+
 1.63 Fixes for bugs 87048, 86552, 78637: Use of qw(...) as parentheses is deprecated error.
 
 1.61 No Changes
