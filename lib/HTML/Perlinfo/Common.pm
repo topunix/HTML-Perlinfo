@@ -1,4 +1,6 @@
 package HTML::Perlinfo::Common;
+use strict;
+use warnings;
 
 our @ISA = qw(Exporter);
 our @EXPORT = qw(initialize_globals print_table_colspan_header print_table_row print_table_color_start print_table_color_end print_color_box print_table_row_color print_table_start print_table_end print_box_start print_box_end print_hr print_table_header print_section print_license add_link check_path check_args check_module_args perl_version release_date process_args error_msg match_string);
@@ -145,7 +147,7 @@ sub perl_version {
 sub release_date {
 
 # when things escaped
-  %released = (
+  my %released = (
     5.000    => '1994-10-17',
     5.001    => '1995-03-14',
     5.002    => '1996-02-96',
@@ -251,9 +253,9 @@ sub process_args {
     while(my($key, $value) = splice @_, 0, 2) {
         $sub->($key, $value);
         if (exists $params{$key}){
-           @key_value = ref(${$params{$key}}[0]) eq 'ARRAY' ? @{$params{$key}} : $params{$key};
+           my @key_value = ref(${$params{$key}}[0]) eq 'ARRAY' ? @{$params{$key}} : $params{$key};
            push @key_value,$value;
-           $new_val = [@key_value];
+           my $new_val = [@key_value];
            $params{$key} = $new_val;
         }
         else {
@@ -283,7 +285,7 @@ sub  print_table_colspan_header {
 	  my $num_cols = $_[0];
 	  my $HTML = "<tr>";
 
-	  for ($i=0; $i<$num_cols; $i++) {
+	  for (my $i=0; $i<$num_cols; $i++) {
 
 		  $HTML .= sprintf("<td class=\"%s\">", ($i==0 ? "e" : "v" ));
 
@@ -340,7 +342,7 @@ sub  print_table_colspan_header {
   	  my $num_cols = $_[0];
           my $HTML = $_[1] ? "<tr bgcolor=\"$_[1]\">" : "<tr>";
 
-          for ($i=0; $i<$num_cols; $i++) {
+          for (my $i=0; $i<$num_cols; $i++) {
 
                   $HTML .= $_[1] ? "<td bgcolor=\"$_[1]\">" : sprintf("<td class=\"%s\">", ($i==0 ? "e" : "v" ));
 

@@ -1,16 +1,20 @@
 package HTML::Perlinfo::Loaded;
-BEGIN { %Seen = %INC } 
+BEGIN { %HTML::Perlinfo::Loaded::Seen = %INC }
+use strict;
+use warnings;
 
 use HTML::Perlinfo::Modules;
 
 $VERSION = '1.02';
 
-%INC = %Seen;
-END { 
- 
+foreach my $key (%HTML::Perlinfo::Loaded::Seen) {
+    $INC{$key} = $HTML::Perlinfo::Loaded::Seen{$key} unless exists $INC{$key};
+}
+END {
+
     delete $INC{'HTML/Perlinfo/Loaded.pm'};	
     my $m = HTML::Perlinfo::Modules->new(full_page=>0, title=>'perlinfo(INFO_LOADED)');
-    $m->print_htmlhead; 
+    $m->print_htmlhead;
     $m->print_modules('files_in'=>[values %INC],'section'=>'Loaded Modules');
     print $m->info_variables,"</div></body></html>";
 }
