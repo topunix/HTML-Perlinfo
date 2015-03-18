@@ -1,12 +1,12 @@
 package HTML::Perlinfo;
-BEGIN { %Seen = %INC }
+BEGIN { %HTML::Perlinfo::Seen = %INC }
 
 use strict;
 use warnings;
-use Carp (); 
+use Carp ();
 
 use HTML::Perlinfo::Apache;
-use HTML::Perlinfo::Modules; 
+use HTML::Perlinfo::Modules;
 use HTML::Perlinfo::Common;
 
 use base qw(Exporter HTML::Perlinfo::Base);
@@ -17,23 +17,25 @@ our $VERSION = '1.64';
 sub perlinfo {
   my ($opt) = @_;
   $opt = 'INFO_ALL' unless $opt;
- 
+
   error_msg("Invalid perlinfo() parameter: @_")
-  if (($opt !~ /^INFO_(?:ALL|GENERAL|CONFIG|VARIABLES|APACHE|MODULES|LICENSE|LOADED)$/) || @_ > 1); 
- 
+  if (($opt !~ /^INFO_(?:ALL|GENERAL|CONFIG|VARIABLES|APACHE|MODULES|LICENSE|LOADED)$/) || @_ > 1);
+
   $opt = lc $opt;
   my $p = HTML::Perlinfo->new();
   $p->$opt;
 
 }
-%INC = %HTML::Perlinfo::Seen;
+foreach my $key (%HTML::Perlinfo::Seen) {
+    $INC{$key} = $HTML::Perlinfo::Seen{$key} unless exists $INC{$key};
+}
 1;
 __END__
 =pod
 
 =head1 NAME
 
-HTML::Perlinfo - Display a lot of Perl information in HTML format 
+HTML::Perlinfo - Display a lot of Perl information in HTML format
 
 =head1 SYNOPSIS
 

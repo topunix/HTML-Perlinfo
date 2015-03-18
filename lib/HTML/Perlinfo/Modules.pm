@@ -1,6 +1,7 @@
 package HTML::Perlinfo::Modules;
 
 use strict;
+use warnings;
 use File::Find;
 use File::Spec;
 use Carp ();
