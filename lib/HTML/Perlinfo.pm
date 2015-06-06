@@ -195,9 +195,8 @@ Some might notice that HTML::Perlinfo shares the look and feel of the PHP functi
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-html-perlinfo@rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=HTML-Perlinfo>.
-I will be notified, and then you'll automatically be notified of progress on your bug as I make changes.
+If you'd like to report an issue you can use github's
+L<issue tracker|https://github.com/mixedconnections/HTML-Perlinfo/issues>.
 
 =head1 SEE ALSO
 
