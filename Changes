@@ -1,5 +1,28 @@
 Revision history for Perl extension HTML::Perlinfo 
 
+1.73 version bump because of a wrong upload on PAUSE
+
+1.72 Reverted back to CGI.pm. The alternatives were too troublesome. Added some new core directories.
+
+1.71 Fixed test file and pod 
+
+1.70 Replaced CGI.pm with HTML-Entities and CGI-Deurl.  
+
+1.69 Changes
+     Base.pm:
+     -Created a new method 'print_htmlstart' to handle the doctype declaration
+     -Created a new constructor option 'htmlstart' for this method (default is true)
+     -Modified the HTML and CSS in print_htmlhead, by adding a new id 'perlinfo'.
+     -Modified info_apache to check for print_httpd() 
+     HTML::Perlinfo::Modules:
+     -Fixed get_files_in sub to check if file_path is defined
+
+1.68 Fixed makefile to include "perlinfo", thanks to Kurt Jaeger
+
+1.67 distzilla messed up the release, releasing again!
+
+1.66 Fixed distfile, included dist.ini
+
 1.65 Fixed subroutine redefine errors (perlinfo script) #1 with patch from Baldur Kristinsson
 
 1.64 Added git repo and bumped version number in Perlinfo.pm
